@@ -2,36 +2,47 @@
 import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 import styles from './Create.module.css';
+import { useForm } from 'react-hook-form';
+import {toast} from "react-toastify";
+import { todoContext } from '../component/Wrapper';
 
-const Create = ({ todos, setTodos }) => {
-  const [title, setTitle] = useState('');
+const Create = () => {
+  const [todos, setTodos] = useContext(todoContext);
   const [complete, setComplete] = useState(false);
 
-  const submitHandler = (e) => {
-    e.preventDefault();
+  const{
+    register,
+    handleSubmit,
+    reset,
+    formState: {errors},
+  } = useForm();
 
-    const newTodo = {
-      id: nanoid(),
-      title,
-      isComplete: complete,
-    };
+  const submitHandler = (data) => {
+    data.isComplete=false;
+    data.id=nanoid();
 
-    setTodos([...todos, newTodo]);
-    setTitle('');
-    setComplete(false);
+    const copytodos = [...todos];
+    copytodos.push(data);
+    setTodos(copytodos);
+
+    toast.success("Todo Created")
+
+    reset();
   };
 
   return (
     <div className={styles.spa}>
       <h1 className={styles.hh}>Set <span className={styles.hp}>Reminders</span> for Task</h1>
-      <form className={styles.fo} onSubmit={submitHandler}>
+      <form className={styles.fo} onSubmit={handleSubmit(submitHandler)}>
         <input
           className={styles.in}
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          {...register("title", { 
+            required: "Title cannot be empty"
+          })}
           type="text"
           placeholder="title"
         />
+        <small className={styles.error}>{errors?.title?.message}</small>
         <br /><br />
         <button className={styles.btn}>Create Todo</button>
       </form>

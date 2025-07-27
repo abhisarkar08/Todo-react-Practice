@@ -20,6 +20,7 @@
     padding: 2%;
     border: 1px solid white; 
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 .in{
     background-color: #1f2937;
@@ -34,6 +35,16 @@
 .btn:active{
     transform: scale(0.97);
 }
+.error{
+    color: red;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    text-align: left;
+    display: block;
+    text-align: center;
+    margin-right: 7rem;
+    transition: all 0.2s ease;
+}
 @media(min-width:1024px){
     .hh{
         font-size: 3.2rem;
@@ -43,6 +54,9 @@
     }
     .in{
         width: 50%;
+    }
+    .error{
+        margin-right: 25%;
     }
 }
 @media(min-width:1210px){
@@ -55,6 +69,9 @@
     .in{
         width: 50%;
     }
+    .error{
+        margin-right: 19vw;
+    }
 }
 @media(min-width:1550px) and (min-width:1850px) and (min-width:2030px){
     .hh{
@@ -62,5 +79,13 @@
     }
     .in{
         width: 40%;
+    }
+    .error{
+        margin-right: 30vw;
+    }
+}
+@media(min-width:2031px) {
+    .error{
+        margin-right: 17vw;
     }
 }

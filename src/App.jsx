@@ -4,7 +4,6 @@ import Read from './component/Read.jsx';
 import styles from './App.module.css';
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
 
   return (
     <div className={styles.hh}>

@@ -1,14 +1,17 @@
 // Read.jsx
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import styles from './Read.module.css';
+import {toast} from "react-toastify";
+import { todoContext } from '../component/Wrapper';
 
-const Read = (props ) => {
-  const todos = props.todos;
-  const setTodos = props.setTodos;
+
+const Read = () => {
+  const [todos,setTodos] = useContext(todoContext);
 
   const DeleteHandler = (id) => {
     const de = todos.filter((todo)=> todo.id != id);
     setTodos(de);
+    toast.error("Todo Deleted")
   };
 
   const renderedTodos = todos.map((todo) => (
