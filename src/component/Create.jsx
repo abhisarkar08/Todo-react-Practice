@@ -1,6 +1,7 @@
 // Create.jsx
 import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
+import styles from './Create.module.css';
 
 const Create = ({ todos, setTodos }) => {
   const [title, setTitle] = useState('');
@@ -21,24 +22,18 @@ const Create = ({ todos, setTodos }) => {
   };
 
   return (
-    <div>
-      <h1>Create Task</h1>
-      <form onSubmit={submitHandler}>
+    <div className={styles.spa}>
+      <h1 className={styles.hh}>Set <span className={styles.hp}>Reminders</span> for Task</h1>
+      <form className={styles.fo} onSubmit={submitHandler}>
         <input
+          className={styles.in}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           type="text"
           placeholder="title"
         />
         <br /><br />
-        <input
-          checked={complete}
-          onChange={(e) => setComplete(e.target.checked)}
-          type="checkbox"
-        />{' '}
-        Completed
-        <br /><br />
-        <button>Create Todo</button>
+        <button className={styles.btn}>Create Todo</button>
       </form>
     </div>
   );

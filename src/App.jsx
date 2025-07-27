@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import Create from './component/Create.jsx';
 import Read from './component/Read.jsx';
+import styles from './App.module.css';
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    { id: 1, title: 'I can do it', isComplete: false },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   return (
-    <div>
+    <div className={styles.hh}>
       <Create todos={todos} setTodos={setTodos} />
       <br /><br />
-      <Read todos={todos} />
+      <Read todos={todos} setTodos={setTodos} />
     </div>
   );
 };

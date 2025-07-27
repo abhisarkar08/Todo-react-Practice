@@ -1,0 +1,66 @@
+.hh{
+    padding-top: 2.5rem;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 520;
+    transition: all 0.2s ease;
+}
+.hp{
+    color: red;
+}
+.fo{
+    margin-top: 2.3rem;
+}
+.btn{
+    margin-top: 1.5rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 2%;
+    border: 1px solid white; 
+    transition: all 0.2s ease;
+}
+.in{
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.3rem;
+    transition: all 0.2s ease;
+    outline: none;
+}
+.btn:active{
+    transform: scale(0.97);
+}
+@media(min-width:1024px){
+    .hh{
+        font-size: 3.2rem;
+    }
+    .spa{
+        width: 60%;
+    }
+    .in{
+        width: 50%;
+    }
+}
+@media(min-width:1210px){
+    .hh{
+        font-size: 3.5rem;
+    }
+    .spa{
+        width: 60%;
+    }
+    .in{
+        width: 50%;
+    }
+}
+@media(min-width:1550px) and (min-width:1850px) and (min-width:2030px){
+    .hh{
+        font-size: 5rem;
+    }
+    .in{
+        width: 40%;
+    }
+}

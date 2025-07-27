@@ -1,0 +1,71 @@
+.hh{
+    color: white;
+    font-size: 2rem;
+    font-weight: 520;
+    transition: all 0.2s ease;
+}
+.hp{
+    color: red;
+}
+.na{
+    margin: 2rem auto 0 auto;
+    width: 85%;
+    list-style-type: none;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.2s ease;
+}
+.ala{
+    display: flex;
+    justify-content:space-between ;
+    background-color: black;
+    padding: 0.7rem 1rem;
+}
+.dele{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.title{
+    opacity: 0.6;
+    font-size: 1.3rem;
+}
+@media(min-width:500px) {
+    .na{
+        width: 60%;
+    }
+}
+@media(min-width:850px) {
+    .na{
+        width: 50%;
+    }
+}
+@media(min-width:1024px) {
+    .ao{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-top: 2.6rem;
+    }
+    .na{
+        width: 85%;
+    }
+    .hh{
+        font-size: 2.3rem;
+    }
+}
+@media(min-width:1210px){
+    .hh{
+        font-size: 2.8rem;
+    }
+    .na{
+        width: 75%;
+    }
+}
+@media(min-width:1550px) and (min-width:1850px) and (min-width:2030px){
+    .hh{
+        font-size: 5rem;
+    }
+}
