@@ -1,10 +1,10 @@
 // Create.jsx
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { nanoid } from 'nanoid';
 import styles from './Create.module.css';
 import { useForm } from 'react-hook-form';
 import {toast} from "react-toastify";
-import { todoContext } from '../component/Wrapper';
+import { todoContext } from '../Wrapper';
 
 const Create = () => {
   const [todos, setTodos] = useContext(todoContext);

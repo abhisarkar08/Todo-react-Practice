@@ -2,7 +2,7 @@
 import React, { Fragment, useContext } from 'react';
 import styles from './Read.module.css';
 import {toast} from "react-toastify";
-import { todoContext } from '../component/Wrapper';
+import { todoContext } from '../Wrapper';
 
 
 const Read = () => {
